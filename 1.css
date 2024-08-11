@@ -1,0 +1,359 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+body{
+  
+    background-image: url(backgroundimage.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}   
+header{
+    background: rgba(0, 0, 0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 90px;
+
+    
+}
+ul{
+    display: flex;
+    margin-right: 30px;
+
+}
+ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+li a{
+    text-decoration:none;
+    color: white;
+    font-weight: 500;
+    font-size: x-large;
+    
+}
+li a:hover{
+    color: orange;
+}
+.toggel_button{
+    display: none;
+}
+.toggel_button button img{
+    margin-right: 20px;
+}
+.toggel_button button{
+    /* background: rgba(0, 0, 0,0.4); */
+    background: transparent;
+    transition: height;
+    border: none;
+    cursor: pointer;
+}
+.toggel_button button img:hover{
+    width: 60px;
+}
+.menu1 {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    right: 2rem;
+    top: 90px;
+    height: 0px;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu1.open {
+    display: block;
+    height: 190px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: sticky;
+    top: 90px;
+}
+
+.menu1 li{
+    list-style: none;
+    padding: 1rem;
+
+    
+}
+.menu1.open{
+    display: block;
+    height: 190px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0px;
+    position: sticky;
+    top: 90px;
+    
+    
+}
+
+.heading{
+
+    margin: 10px;
+    height: 100px;
+    color: white;
+    padding-top:10px ;
+    font-size: xx-large;
+    text-shadow: 10px 10px 10px black;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0,0.4);
+}
+
+.main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.main2 label, .main2 input, .main2 button {
+    margin: 10px 0;
+    color: white;
+}
+
+.main2 input {
+    padding: 10px;
+    font-size: x-large;
+    background-color: transparent;
+    width: 400px; 
+    border-radius: 5px;
+
+}
+
+.main2 label {
+    font-weight: 900;
+    font-size: xx-large;
+    width: max-content;
+    text-shadow: 10px 10px 10px black;
+}
+
+.main2 button {
+    cursor: pointer;
+    font-size: large;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+    width: max-content;
+    text-shadow: 10px 10px 10px black;
+    box-shadow: 8px 10px 20px black;
+}
+
+.main2 button:hover{
+    background-color: orange;
+    scale: 1.1;
+}
+
+#result{
+    height: 7vh;
+    width: 30vh;
+    margin-top: 10px;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+.line{
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    height: 20px;
+    
+}
+.about{
+    height: 50vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heading1{
+    padding: 20px;
+text-align: center;
+color: white;
+font-size: xx-large;
+text-shadow: 10px 10px 10px black;
+
+
+}
+.paragraph{
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+    text-shadow: 10px 10px 10px black;
+    font-size: x-large;
+
+}
+.paragraph p a{
+    color: orange;
+    text-decoration: none;
+
+}
+.paragraph p a:hover{
+    font-size: 30px;
+}
+footer{
+    padding: 0;
+    margin: 0;
+    height: 600px;
+    background: rgba(0, 0, 0,0.8);
+
+}
+.heading2{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+text-shadow: 10px 10px 10px black;
+padding-top:20px;
+}
+.box{
+    height:max-content;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    
+}
+.mainboxes{
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    
+}
+.box h3{
+    color: rgba(255, 255, 255, 0.639);
+    margin-left: 10px;
+    display: grid;
+    font-size: xx-large;
+    font-family: "Edu AU VIC WA NT Hand", cursive,sans-serif,'Times New Roman', Times, serif;
+}
+.box p{
+    color: rgba(255, 255, 255, 0.639);
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-family: "Edu AU VIC WA NT Hand", cursive,sans-serif,'Times New Roman', Times, serif;
+    text-decoration: none;
+    
+}
+.box a p{
+    text-decoration: none;
+    color: orange;
+}
+
+
+@media only screen and (max-width:700px){
+    ul li a{
+        display: none;
+    }
+   main{
+    height: 60vh;
+   }
+    .toggel_button{
+        display: block;
+        cursor: pointer;
+    }
+    .heading{
+        font-size: larger;
+        margin: 10px;
+    }
+    .main2 label, .main2 input, .main2 button {
+        margin: 5px 0;
+        
+    }
+    .main2 input{
+        padding: 8px;
+        width: 200px;
+    }
+    .main2 label {
+        font-weight: 900;
+        font-size: large;
+      }
+      .about{
+        height: 40vh;
+    }
+    .heading1{
+        margin-top: 10px;
+    font-size: large; 
+    
+    
+    }
+    .heading2{
+        font-size: large;
+    }
+    .paragraph{
+        
+        font-size: small;
+    
+    }
+    .box{
+        margin: 10px;
+       
+    }
+    .box h3{
+        font-size: small;
+        margin-left: 4px;
+        }
+    .box p{
+        font-size: small;
+        margin-bottom: 10px;
+        margin-left: 50px;
+
+    }
+    footer{
+        height: 40vh;
+    }
+    .paragraph p a:hover{
+        font-size: 15px;
+    }
+
+
+}
+
+@media only screen and (max-width:390px){
+    footer{
+        height: 50vh;
+    }
+    .mainboxes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box h3{
+        font-size: small;
+        margin-left: 0;
+        }
+    .box p{
+        font-size: small;
+        margin-bottom: 0px;
+        margin-left: 50px;
+
+    }
+    .paragraph p a:hover{
+        font-size: 15px;
+    }
+
+}

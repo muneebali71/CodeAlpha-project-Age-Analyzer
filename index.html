@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgeAnalyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1.css">
+
+
+    <script type="text/javascript">
+        
+        
+        
+        function myfun(){
+            let dateofbirth=document.getElementById("DOB").value;
+            let targetdate=document.getElementById("DATE").value;
+            if (!dateofbirth || !targetdate) {
+                alert("Please select both dates.");
+                return;
+            }
+
+            let d=new Date(dateofbirth);
+            let a=new Date(targetdate);
+            if(a.getFullYear()<d.getFullYear()){
+                alert("Please enter date of target greater than date of birth.");
+                return;
+            }
+            if(a.getFullYear()<=d.getFullYear()&&a.getDate()<=d.getDate()&&a.getMonth()<=d.getMonth()){
+                alert("Please enter date of target greater than date of birth.");
+                return;
+            }
+            let curage = a.getFullYear() - d.getFullYear();
+            let curmonth = a.getMonth() - d.getMonth();
+            let curday = a.getDate() - d.getDate();
+
+            if(curmonth < 0||(curmonth==0&&curday<0)){
+                curage--;
+                curmonth+=(curday<0)?11:12;
+            }
+           if(curday<0){
+            let premonth=a.getMonth()-1;
+            if(premonth<0){
+                premonth=11;
+            }
+            let daysiprev=new Date(a.getFullYear(),premonth+1,0).getDate();
+            curday+=daysiprev;
+           }
+
+
+
+            document.getElementById("result").innerHTML="years: "+curage+" Months: "+curmonth+" day: "+curday;
+
+
+        }
+
+        function func1() {
+    console.log("Toggle button clicked");
+            const menu = document.querySelector('.menu1');
+            menu.classList.toggle('open');
+   }
+
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logoimage">
+            <img src="logo.png" alt="LOGO IMAGE" width="150">
+        </div>
+        <nav class="header-links">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About Us</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+        
+    </nav>
+    <div class="toggel_button"><button onclick="func1()">
+        <img src="menuicon2.png" alt="Menu Icon">
+    </button>
+</div>
+    </header>
+   <div class="menu1 ">
+    <li><a href="#Home">Home</a></li>
+    <li><a href="#About">About Us</a></li>
+    <li><a href="#Contact">Contact Us</a></li>
+   </div>
+   
+   
+    <main id="Home">
+
+        <div class="main1">
+        <div class="heading" > <h1>Age Calculator</h1></div>
+        <div class="main2">
+            
+        <label >Date of Birth</label>
+        <input type="date" id="DOB" required>
+        <label >Age at the date of</label>
+        <input type="date" id="DATE" required>
+        <button onclick="myfun()">Calculate</button>
+        <p id="result" ></p>
+    </div>
+    </div>
+    
+    </main>
+    
+    <div class="line"></div>
+
+    <div id="About" class="about">
+        <div class="heading1"><h2>About Us</h2></div>
+
+        <div class="paragraph"><p>Welcome to AgeAnalyzer,Our mission is to help you easily determine your exact age, down to the year, month, and day, whether you're reflecting on the past or planning for future milestones. At AgeAnalyzer, we believe that age is more than just a number. It's a journey, a collection of experiences, and a reflection of time. Our vision is to create a platform that not only provides accurate age calculations but also fosters an appreciation for life's various stages.<br/><br/>Have questions or feedback? We'd love to hear from you! Visit our <a href="#Contact" >Contact Us</a> page for more details on how to reach us.</p></div>
+    </div>
+    <div class="line"></div>
+
+    <footer id="Contact">
+        <div class="heading2"><h2>Contact Us</h2></div>
+        <div class="mainboxes">
+        <div class="box">
+            <h3>Name:</h3><p>Muneeb Ali</p>
+            <h3>Email:</h3><p>muneebalimarwat@gmail.com</p>
+            
+        </div>
+        <div class="box">
+            <h3>Linkedin:</h3>
+            <a href="https://www.linkedin.com/in/muneeb-ali-8368202a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><p>Linkedin Profile</p></a>
+            <h3>Contact Number:</h3>
+            <p>+92 - 3161191791</p>
+        </div>
+    </div>
+    </footer>
+
+</body>
+</html>
